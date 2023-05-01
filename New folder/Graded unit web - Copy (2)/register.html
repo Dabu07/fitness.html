@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Fitt Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+  </head>
+  <body>
+    <form id="registeruser" name="registeruser" method="post" action="register.php">
+        <fieldset><legend>Registration Form</legend>
+                <label for="username">Username : </label><input type="text" id="username" name="username"  size="15" /><span id="usernameFb"></span> <br />
+                <label for="firstname">First name : </label><input type="text" id="firstname" name="firstname"  size="15" /><span id="firstnameFb"></span></br>
+                <label for="surname">Surname : </label><input type="text" id="surname" name="surname"  size="15" /><span id="surnameFb"></span> <br />
+                <label for="emailadd">Email Address : </label><input type="text" id="emailadd" name="emailadd"  size="30" /><span id="emailFb"></span> <br />
+                <!--<label for="dob">Date of Birth (YYYY-MM-DD) : </label><input type="text" id="dob" name="dob" required size="10" /><br />-->
+                <fieldset>
+                    <legend>Date of Birth</legend>
+                    <label class="datelabel" for="dayob">Day</label><select name="dayob" id="dayob"></select>
+                    <label class="datelabel" for="monthob">Month</label>
+                    <select name="monthob" id="monthob">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <label class="datelabel" for="yearob">Year</label><select name="yearob" id="yearob"></select>
+                    <span id="ageFb"></span>
+                </fieldset>
+        
+                <label for="userpass">Password : </label><input type="password" id="userpass" name="userpass"  size="15" /><span id="userpassFb"></span>  <br />
+                <label for="passstrresult">Stenght</label><div id="passstrresult" style="height:20px;display:inline-block;margin-left:15px;"></div><br/>
+                <label for="secondpass">Password : </label><input type="password" id="secondpass" name="secondpass"  size="15" /><span id="secondpassFb"></span> <br />
+                <label for="tnc">I agree to the Terms and Conditions</label><input type="checkbox" name="tnc" id="tnc"  /><span id="tncFb"></span><br />
+            <button type="reset">Reset</button><button id="submitb" type="submit">Register</button>
+        </fieldset>
+    </form>
+     <button type="goHome" onclick="window.location.href='index.html'">Go to Home Page</button>
+</body> 
+<script src="js/functions.js"></script>
+<script src="js/register.js"></script>
+
+<script>
+document.onreadystatechange = function(){
+    if(document.readyState=="complete") {
+        prepareRegister();
+    }
+}
+</script>
+
+</html>

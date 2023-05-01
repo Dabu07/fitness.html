@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular Fitness</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Formular Fitness</h1>
+    <form id="formularFitness">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" required>
+        <br>
+        <label for="varsta">Vârstă:</label>
+        <input type="number" id="varsta" required>
+        <br>
+        <label for="greutate">Greutate (kg):</label>
+        <input type="number" id="greutate" required>
+        <br>
+        <label for="inaltime">Înălțime (cm):</label>
+        <input type="number" id="inaltime" required>
+        <br>
+        <button type="submit">Trimite</button>
+    </form>
+
+    <script>
+        document.getElementById('formularFitness').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nume = document.getElementById('nume').value;
+            const varsta = document.getElementById('varsta').value;
+            const greutate = document.getElementById('greutate').value;
+            const inaltime = document.getElementById('inaltime').value;
+
+            const fitnessData = {
+                data: new Date().toLocaleDateString(),
+                nume: nume,
+                varsta: varsta,
+                greutate: greutate,
+                inaltime: inaltime
+            };
+
+            let fitnessDataList = JSON.parse(localStorage.getItem('fitnessDataList')) || [];
+            fitnessDataList.push(fitnessData);
+            localStorage.setItem('fitnessDataList', JSON.stringify(fitnessDataList));
+
+            alert('Datele au fost salvate cu succes!');
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

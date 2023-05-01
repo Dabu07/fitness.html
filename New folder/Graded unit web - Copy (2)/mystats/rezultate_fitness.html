@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultate Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rezultate Fitness</h1>
+    <table id="tabelFitness">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Nume</th>
+                <th>Vârstă</th>
+                <th>Greutate (kg)</th>
+                <th>Înălțime (cm)</th>
+            </tr>
+        </thead>
+        <tbody>
+                        </tbody>
+    </table>
+    <button id="inapoiLaFormular">Înapoi la formular</button>
+
+    <script>
+        window.onload = function () {
+            const fitnessDataList = JSON.parse(localStorage.getItem('fitnessDataList')) || [];
+
+            for (const fitnessData of fitnessDataList) {
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${fitnessData.data}</td>
+                    <td>${fitnessData.nume}</td>
+                    <td>${fitnessData.varsta}</td>
+                    <td>${fitnessData.greutate}</td>
+                    <td>${fitnessData.inaltime}</td>
+                `;
+                document.getElementById('tabelFitness').querySelector('tbody').appendChild(newRow);
+            }
+
+            document.getElementById('inapoiLaFormular').addEventListener('click', function () {
+                window.location.href = 'formular_fitness.html';
+            });
+        };
+        
+    </script>
+  
+</body>
+</html>

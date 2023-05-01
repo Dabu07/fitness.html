@@ -1,0 +1,87 @@
+/* Stiluri generale */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 480px;
+}
+
+h1 {
+    color: #37474f;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+label {
+    color: #37474f;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #9ac8eb;
+}
+
+button {
+    background-color: #9ac8eb;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #7fb3da;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Animatii */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    animation: fadeIn 1s ease-in;
+}

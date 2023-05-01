@@ -1,0 +1,100 @@
+
+body {
+  background-color: #f3e5f5; /* light purple */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 500px;
+  padding: 30px;
+}
+
+legend {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+fieldset legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.datelabel {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#dayob,
+#monthob,
+#yearob {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+input[type="text"],
+input[type="password"],
+select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 90%;
+}
+
+button {
+  background-color: #4CAF50; /* green */
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+button[type="reset"] {
+  background-color: #f44336; /* red */
+}
+button[type="goHome"]{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+span {
+  color: #f44336; /* red */
+  display: none;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+input:invalid {
+  border-color: #f44336; /* red */
+}
+
+input:valid {
+  border-color: #4CAF50; /* green */
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #9b4dca; /* purple */
+  box-shadow: 0px 0px 10px rgba(155, 77, 202, 0.3);
+}
